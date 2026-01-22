@@ -17,12 +17,33 @@
 
                 body {
                               font-family: 'Quicksand', sans-serif;
-                              background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
                               min-height: 100vh;
                               display: flex;
                               justify-content: center;
                               padding: 20px;
                               color: #ffffff;
+                              position: relative;
+                }
+
+                /* Background image with dark overlay */
+                .background-image {
+                              position: fixed;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              z-index: -2;
+                              background: url('background.jpg') center center / cover no-repeat;
+                }
+
+                .background-overlay {
+                              position: fixed;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              z-index: -1;
+                              background: rgba(0, 0, 0, 0.7);
                 }
 
                 .container {
@@ -31,19 +52,6 @@
                               text-align: center;
                               padding: 30px 20px;
                 }
-
-                /* Paw print decorations */
-                .paw-bg {
-                              position: fixed;
-                              font-size: 80px;
-                              opacity: 0.05;
-                              color: #c8e600;
-                              z-index: -1;
-                }
-                .paw1 { top: 10%; left: 5%; transform: rotate(-20deg); }
-                .paw2 { top: 30%; right: 10%; transform: rotate(15deg); }
-                .paw3 { bottom: 20%; left: 15%; transform: rotate(-10deg); }
-                .paw4 { bottom: 40%; right: 5%; transform: rotate(25deg); }
 
                 .profile-section {
                               margin-bottom: 25px;
@@ -58,6 +66,7 @@
                               margin-bottom: 15px;
                               box-shadow: 0 0 30px rgba(200, 230, 0, 0.3);
                               transition: transform 0.3s ease;
+                              background: #2a2a2a;
                 }
 
                 .profile-pic:hover {
@@ -73,50 +82,16 @@
                 }
 
                 .subtitle {
-                              color: #888;
+                              color: #ccc;
                               font-size: 1em;
                               margin-bottom: 10px;
                 }
 
                 .bio {
-                              color: #ccc;
+                              color: #ddd;
                               font-size: 0.95em;
                               line-height: 1.5;
                               margin-bottom: 25px;
-                }
-
-                /* Gallery Section */
-                .gallery {
-                              display: grid;
-                              grid-template-columns: repeat(2, 1fr);
-                              gap: 10px;
-                              margin-bottom: 30px;
-                }
-
-                .gallery-item {
-                              aspect-ratio: 1;
-                              border-radius: 15px;
-                              overflow: hidden;
-                              border: 2px solid #444;
-                              transition: all 0.3s ease;
-                              background: #2a2a2a;
-                              display: flex;
-                              align-items: center;
-                              justify-content: center;
-                              color: #666;
-                              font-size: 0.8em;
-                }
-
-                .gallery-item:hover {
-                              border-color: #c8e600;
-                              transform: scale(1.02);
-                              box-shadow: 0 0 20px rgba(200, 230, 0, 0.2);
-                }
-
-                .gallery-item img {
-                              width: 100%;
-                              height: 100%;
-                              object-fit: cover;
                 }
 
                 /* Social Links */
@@ -132,7 +107,7 @@
                               justify-content: center;
                               gap: 12px;
                               padding: 15px 20px;
-                              background: linear-gradient(135deg, #333 0%, #2a2a2a 100%);
+                              background: rgba(50, 50, 50, 0.8);
                               border: 2px solid #444;
                               border-radius: 50px;
                               color: #fff;
@@ -140,6 +115,7 @@
                               font-weight: 600;
                               font-size: 1em;
                               transition: all 0.3s ease;
+                              backdrop-filter: blur(5px);
                 }
 
                 .link-btn:hover {
@@ -161,7 +137,7 @@
                               color: #fff;
                 }
 
-                /* X/Twitter */
+                /* Twitter */
                 .link-btn.twitter:hover {
                               background: #000;
                               border-color: #fff;
@@ -191,7 +167,7 @@
 
                 .footer {
                               margin-top: 40px;
-                              color: #555;
+                              color: #888;
                               font-size: 0.8em;
                 }
 
@@ -207,40 +183,17 @@
             </style>
   </head>
   <body>
-        <!-- Background paw prints -->
-        <div class="paw-bg paw1">🐾</div>div>
-        <div class="paw-bg paw2">🐾</div>div>
-        <div class="paw-bg paw3">🐾</div>div>
-        <div class="paw-bg paw4">🐾</div>div>
+        <!-- Background image with overlay -->
+        <div class="background-image"></div>div>
+        <div class="background-overlay"></div>div>
 
         <div class="container">
                   <div class="profile-section">
-                                <!-- Replace src with your profile image -->
-                                <img src="https://via.placeholder.com/150/2a2a2a/c8e600?text=🐾" alt="Ashky Profile" class="profile-pic" id="profile-img">
-                                <h1>Ashky ✨</h1>
+                                <img src="https://via.placeholder.com/150/2a2a2a/c8e600?text=%F0%9F%90%BE" alt="Ashky Profile" class="profile-pic">
+                                <h1>Ashky</h1>
                               <p class="subtitle">Ricky | 力奇 | Asher</p>p>
-                              <p class="bio">🐾 Fursuiter & Furry Artist<br>Making fluffy dreams come true!</p>p>
+                              <p class="bio">Fursuiter & Furry Artist<br>Making fluffy dreams come true!</p>p>
                   </div>div>
-                
-                <!-- Gallery - Replace placeholder images with your art/fursuit photos -->
-                <div class="gallery">
-                            <div class="gallery-item">
-                                            <span>Art 1</span>
-                                            <!-- <img src="your-art-1.jpg" alt="Artwork 1"> -->
-                            </div>div>
-                            <div class="gallery-item">
-                                            <span>Art 2</span>
-                                            <!-- <img src="your-art-2.jpg" alt="Artwork 2"> -->
-                            </div>div>
-                            <div class="gallery-item">
-                                            <span>Fursuit 1</span>
-                                            <!-- <img src="your-fursuit-1.jpg" alt="Fursuit Photo 1"> -->
-                            </div>div>
-                            <div class="gallery-item">
-                                            <span>Fursuit 2</span>
-                                            <!-- <img src="your-fursuit-2.jpg" alt="Fursuit Photo 2"> -->
-                            </div>div>
-                </div>div>
                 
                 <!-- Social Links -->
                 <div class="links">
@@ -256,7 +209,7 @@
                             
                             <a href="https://x.com/Asher_Panth" target="_blank" class="link-btn twitter">
                                             <i class="fab fa-x-twitter"></i>i>
-                                            X (Twitter)
+                                            Twitter
                             </a>a>
                             
                             <a href="https://www.tiktok.com/@ashky7705" target="_blank" class="link-btn tiktok">
@@ -275,7 +228,7 @@
                 </div>div>
         </div>div>
   </body>
-</html>html></p></span></span></h1>
+</html>html></p></h1>
   </body>
       </style></title>
   </head>
