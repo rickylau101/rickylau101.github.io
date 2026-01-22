@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ashky | Ricky 力奇 | Furry Links</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      <style>
+                * {
+                              margin: 0;
+                              padding: 0;
+                              box-sizing: border-box;
+                }
+
+                body {
+                              font-family: 'Quicksand', sans-serif;
+                              background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+                              min-height: 100vh;
+                              display: flex;
+                              justify-content: center;
+                              padding: 20px;
+                              color: #ffffff;
+                }
+
+                .container {
+                              max-width: 500px;
+                              width: 100%;
+                              text-align: center;
+                              padding: 30px 20px;
+                }
+
+                /* Paw print decorations */
+                .paw-bg {
+                              position: fixed;
+                              font-size: 80px;
+                              opacity: 0.05;
+                              color: #c8e600;
+                              z-index: -1;
+                }
+                .paw1 { top: 10%; left: 5%; transform: rotate(-20deg); }
+                .paw2 { top: 30%; right: 10%; transform: rotate(15deg); }
+                .paw3 { bottom: 20%; left: 15%; transform: rotate(-10deg); }
+                .paw4 { bottom: 40%; right: 5%; transform: rotate(25deg); }
+
+                .profile-section {
+                              margin-bottom: 25px;
+                }
+
+                .profile-pic {
+                              width: 150px;
+                              height: 150px;
+                              border-radius: 50%;
+                              border: 4px solid #c8e600;
+                              object-fit: cover;
+                              margin-bottom: 15px;
+                              box-shadow: 0 0 30px rgba(200, 230, 0, 0.3);
+                              transition: transform 0.3s ease;
+                }
+
+                .profile-pic:hover {
+                              transform: scale(1.05);
+                }
+
+                h1 {
+                              font-size: 2em;
+                              font-weight: 700;
+                              color: #c8e600;
+                              margin-bottom: 5px;
+                              text-shadow: 0 0 20px rgba(200, 230, 0, 0.5);
+                }
+
+                .subtitle {
+                              color: #888;
+                              font-size: 1em;
+                              margin-bottom: 10px;
+                }
+
+                .bio {
+                              color: #ccc;
+                              font-size: 0.95em;
+                              line-height: 1.5;
+                              margin-bottom: 25px;
+                }
+
+                /* Gallery Section */
+                .gallery {
+                              display: grid;
+                              grid-template-columns: repeat(2, 1fr);
+                              gap: 10px;
+                              margin-bottom: 30px;
+                }
+
+                .gallery-item {
+                              aspect-ratio: 1;
+                              border-radius: 15px;
+                              overflow: hidden;
+                              border: 2px solid #444;
+                              transition: all 0.3s ease;
+                              background: #2a2a2a;
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              color: #666;
+                              font-size: 0.8em;
+                }
+
+                .gallery-item:hover {
+                              border-color: #c8e600;
+                              transform: scale(1.02);
+                              box-shadow: 0 0 20px rgba(200, 230, 0, 0.2);
+                }
+
+                .gallery-item img {
+                              width: 100%;
+                              height: 100%;
+                              object-fit: cover;
+                }
+
+                /* Social Links */
+                .links {
+                              display: flex;
+                              flex-direction: column;
+                              gap: 12px;
+                }
+
+                .link-btn {
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              gap: 12px;
+                              padding: 15px 20px;
+                              background: linear-gradient(135deg, #333 0%, #2a2a2a 100%);
+                              border: 2px solid #444;
+                              border-radius: 50px;
+                              color: #fff;
+                              text-decoration: none;
+                              font-weight: 600;
+                              font-size: 1em;
+                              transition: all 0.3s ease;
+                }
+
+                .link-btn:hover {
+                              background: linear-gradient(135deg, #c8e600 0%, #a0b800 100%);
+                              border-color: #c8e600;
+                              color: #1a1a1a;
+                              transform: translateY(-3px);
+                              box-shadow: 0 10px 30px rgba(200, 230, 0, 0.3);
+                }
+
+                .link-btn i {
+                              font-size: 1.3em;
+                }
+
+                /* Instagram gradient on hover */
+                .link-btn.instagram:hover {
+                              background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+                              border-color: #dc2743;
+                              color: #fff;
+                }
+
+                /* X/Twitter */
+                .link-btn.twitter:hover {
+                              background: #000;
+                              border-color: #fff;
+                              color: #fff;
+                }
+
+                /* TikTok */
+                .link-btn.tiktok:hover {
+                              background: linear-gradient(135deg, #00f2ea, #ff0050);
+                              border-color: #00f2ea;
+                              color: #fff;
+                }
+
+                /* Threads */
+                .link-btn.threads:hover {
+                              background: #000;
+                              border-color: #fff;
+                              color: #fff;
+                }
+
+                /* Xiaohongshu */
+                .link-btn.xiaohongshu:hover {
+                              background: #ff2442;
+                              border-color: #ff2442;
+                              color: #fff;
+                }
+
+                .footer {
+                              margin-top: 40px;
+                              color: #555;
+                              font-size: 0.8em;
+                }
+
+                .footer .paw {
+                              color: #c8e600;
+                }
+
+                @media (max-width: 400px) {
+                              h1 { font-size: 1.6em; }
+                              .profile-pic { width: 120px; height: 120px; }
+                              .link-btn { padding: 12px 15px; font-size: 0.9em; }
+                }
+            </style>
+  </head>
+  <body>
+        <!-- Background paw prints -->
+        <div class="paw-bg paw1">🐾</div>div>
+        <div class="paw-bg paw2">🐾</div>div>
+        <div class="paw-bg paw3">🐾</div>div>
+        <div class="paw-bg paw4">🐾</div>div>
+
+        <div class="container">
+                  <div class="profile-section">
+                                <!-- Replace src with your profile image -->
+                                <img src="https://via.placeholder.com/150/2a2a2a/c8e600?text=🐾" alt="Ashky Profile" class="profile-pic" id="profile-img">
+                                <h1>Ashky ✨</h1>
+                              <p class="subtitle">Ricky | 力奇 | Asher</p>p>
+                              <p class="bio">🐾 Fursuiter & Furry Artist<br>Making fluffy dreams come true!</p>p>
+                  </div>div>
+                
+                <!-- Gallery - Replace placeholder images with your art/fursuit photos -->
+                <div class="gallery">
+                            <div class="gallery-item">
+                                            <span>Art 1</span>
+                                            <!-- <img src="your-art-1.jpg" alt="Artwork 1"> -->
+                            </div>div>
+                            <div class="gallery-item">
+                                            <span>Art 2</span>
+                                            <!-- <img src="your-art-2.jpg" alt="Artwork 2"> -->
+                            </div>div>
+                            <div class="gallery-item">
+                                            <span>Fursuit 1</span>
+                                            <!-- <img src="your-fursuit-1.jpg" alt="Fursuit Photo 1"> -->
+                            </div>div>
+                            <div class="gallery-item">
+                                            <span>Fursuit 2</span>
+                                            <!-- <img src="your-fursuit-2.jpg" alt="Fursuit Photo 2"> -->
+                            </div>div>
+                </div>div>
+                
+                <!-- Social Links -->
+                <div class="links">
+                            <a href="https://www.instagram.com/ashky_uwu" target="_blank" class="link-btn instagram">
+                                            <i class="fab fa-instagram"></i>i>
+                                            Instagram
+                            </a>a>
+                            
+                            <a href="https://www.threads.com/@ashky_uwu" target="_blank" class="link-btn threads">
+                                            <i class="fab fa-threads"></i>i>
+                                            Threads
+                            </a>a>
+                            
+                            <a href="https://x.com/Asher_Panth" target="_blank" class="link-btn twitter">
+                                            <i class="fab fa-x-twitter"></i>i>
+                                            X (Twitter)
+                            </a>a>
+                            
+                            <a href="https://www.tiktok.com/@ashky7705" target="_blank" class="link-btn tiktok">
+                                            <i class="fab fa-tiktok"></i>i>
+                                            TikTok
+                            </a>a>
+                            
+                            <a href="https://xhslink.com/m/1hzA6BfiLRh" target="_blank" class="link-btn xiaohongshu">
+                                            <i class="fas fa-book-open"></i>i>
+                                            小红书 Xiaohongshu
+                            </a>a>
+                </div>div>
+                
+                <div class="footer">
+                            <p>Made with <span class="paw">🐾</span>span> by Ashky</p>
+                </div>div>
+        </div>div>
+  </body>
+</html>html></p></span></span></h1>
+  </body>
+      </style></title>
+  </head>
